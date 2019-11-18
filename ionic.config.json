@@ -1,5 +1,8 @@
 {
   "name": "dyn",
-  "integrations": {},
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
   "type": "angular"
 }
