@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { Form1Module } from './form1/form1.module';
 import { Form2Module } from './form2/form2.module';
+import { OnlineModule } from './online/online.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { Form2Module } from './form2/form2.module';
     IonicModule.forRoot(), 
     AppRoutingModule,
     Form1Module,
-    Form2Module
+    Form2Module,
+    OnlineModule
   ],
   providers: [    
     StatusBar,

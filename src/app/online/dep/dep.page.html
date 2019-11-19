@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ambito: {{ ambito?.nombre }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      Departamentos      
+    </ion-list-header>
+    <ion-item 
+    [routerLink]="'/online/prov/' + dep.ubidep"
+    detail = "true"
+    routerDirection="forward"
+    *ngFor="let dep of ambito?.level0s" >
+    <h2>{{ dep.nombre }}</h2><br>
+    <p>{{ dep.ubigeo }}</p>
+    </ion-item>  
+  </ion-list>
+</ion-content>

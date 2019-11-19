@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Provincia: {{ level1?.nombre}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list inset>
+      <ion-list-header>
+        Distritos
+      </ion-list-header>
+        <ion-item *ngFor="let dist of level1?.level2s">
+          <h2>{{ dist.nombre }} </h2>
+          <p>{{ dist.ubigeo }}</p>
+        </ion-item>
+      </ion-list>
+</ion-content>

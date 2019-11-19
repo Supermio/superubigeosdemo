@@ -25,6 +25,11 @@ export class AppComponent {
       title: 'Form2',
       url: '/form2',
       icon: 'card'
+    },
+    {
+      title: 'Online',
+      url: '/online',
+      icon: 'card'
     }
   ];
   constructor(

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Departamento: {{ level0?.nombre}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+      <ion-list-header>
+        Provincias
+      </ion-list-header>
+        <ion-item 
+          [routerLink]="'/online/dist/' + prov.ubiprov" 
+          detail="true" 
+          routerDirection="forward"  
+          *ngFor ="let prov of level0?.level1s">
+            <h2>{{ prov.nombre }}</h2>
+            <p>{{ prov.ubigeo }}</p>
+        </ion-item>    
+      </ion-list>
+</ion-content>

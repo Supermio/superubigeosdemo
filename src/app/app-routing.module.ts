@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'form2',
     loadChildren: './form2/form2.module#Form2Module'
+  },
+  { 
+    path: 'online',
+    loadChildren: './online/online.module#OnlineModule'
   }
 ];
 
