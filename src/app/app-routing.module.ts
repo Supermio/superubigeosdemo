@@ -30,8 +30,11 @@ const routes: Routes = [
   { 
     path: 'autocomplete', 
     loadChildren: './autocomplete/autocomplete.module#AutocompletePageModule' 
-  }
- 
+  },
+  {
+    path: 'nosql',
+    loadChildren: './nosql/nosql.module#NosqlModule'
+  } 
 ];
 
 @NgModule({

@@ -14,6 +14,9 @@ import { Form1Module } from './form1/form1.module';
 import { Form2Module } from './form2/form2.module';
 import { OnlineModule } from './online/online.module';
 
+import { BaseConfigService } from './service/config/base-config.service';
+import { DbService } from './service/db/db.service';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,7 +29,9 @@ import { OnlineModule } from './online/online.module';
     Form2Module,
     OnlineModule
   ],
-  providers: [    
+  providers: [
+    BaseConfigService,
+    DbService,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { DbService } from '../../providers/db.service';
+import { DbService } from '../db/db.service';
 import { DataFinderService } from '../utils/data-finder.service';
 
 @Injectable({
@@ -20,13 +20,17 @@ export class BaseConfigService {
 
   config: any;
 
-  constructor(private dataFinder: DataFinderService, private db: DbService ) {
+  constructor(
+    private dataFinder: DataFinderService, 
+    private db: DbService 
+    ) {
   }
 
   async init() {
     console.log('Estoy en el constructor del Config');
     await this.LoadConfig();
   }
+  
   initDb() {
     this.db.initialize(
       this.getAppDbUrl(),

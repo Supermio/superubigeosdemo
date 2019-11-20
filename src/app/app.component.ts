@@ -4,6 +4,8 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+import { BaseConfigService } from './service/config/base-config.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -40,17 +42,30 @@ export class AppComponent {
       title: 'Autocomplete',
       url: '/autocomplete',
       icon: 'card'
+    },
+    {
+      title: 'Nosql',
+      url: '/nosql',
+      icon: 'card'
     } 
   ];
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private baseConfig: BaseConfigService
   ) {
     this.initializeApp();
   }
 
   initializeApp() {
+    this.baseConfig.init()
+    .then( resolve => {
+      console.log('Estoy en el InitializeApp');
+      if (this.baseConfig.getAppDbPerUser()){}
+      console.log('El config es: ' + this.baseConfig.getAppDb());
+      this.baseConfig.initDb();
+    })
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
