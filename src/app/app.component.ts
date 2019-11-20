@@ -35,7 +35,12 @@ export class AppComponent {
       title: 'Paginado',
       url: '/paginado',
       icon: 'card'
-    }        
+    },
+    {
+      title: 'Autocomplete',
+      url: '/autocomplete',
+      icon: 'card'
+    } 
   ];
   constructor(
     private platform: Platform,

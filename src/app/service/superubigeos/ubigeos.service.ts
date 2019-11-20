@@ -68,4 +68,20 @@ export class UbigeosService {
       }
     );
   }
+  getFilterDist(pKeyword:string){
+    const pPadre = 'level2s';
+    const pField = 'nombresunat';
+    let filter = `filter[where][${pField}][like]=${pKeyword.toUpperCase()}%`;
+    const consulta = `${this.BASE}${pPadre}?${filter}`;
+    let headers = new HttpHeaders();
+    headers = headers.set('X-IBM-Client-Id',this.key).set('X-IBM-Client-Secret',this.secret)
+    return this.http.get(consulta,
+      {
+        headers:{
+          'X-IBM-Client-Id': this.key,
+          'X-IBM-Client-Secret': this.secret
+        }
+      }
+    );    
+  }
 }

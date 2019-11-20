@@ -26,7 +26,12 @@ const routes: Routes = [
   { 
     path: 'paginado', 
     loadChildren: './page/page.module#PageModule' 
-  }  
+  },
+  { 
+    path: 'autocomplete', 
+    loadChildren: './autocomplete/autocomplete.module#AutocompletePageModule' 
+  }
+ 
 ];
 
 @NgModule({

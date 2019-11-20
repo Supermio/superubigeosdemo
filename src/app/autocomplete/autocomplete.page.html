@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>autocomplete</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="myForm"
+  (ngSubmit)="submit()"
+  novalidate>
+  <ion-auto-complete
+    [dataProvider]="autoService"
+    formControlName="distrito"></ion-auto-complete>
+  
+    <button ion-button
+    type="submit"
+    block>
+    Añadir distrito
+  </button>
+</form>  
+</ion-content>
