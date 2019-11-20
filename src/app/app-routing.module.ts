@@ -22,7 +22,11 @@ const routes: Routes = [
   { 
     path: 'online',
     loadChildren: './online/online.module#OnlineModule'
-  }
+  },
+  { 
+    path: 'paginado', 
+    loadChildren: './page/page.module#PageModule' 
+  }  
 ];
 
 @NgModule({

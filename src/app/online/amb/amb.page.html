@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Ambito</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      Ambitos
+    </ion-list-header>
+    <ion-item 
+    [routerLink]="'/online/dep/' + amb.ubiambito"
+    detail = "true"
+    routerDirection="forward"
+    *ngFor="let amb of ambitos" >
+    <h2>{{ amb.nombre }}</h2><br>
+    <p>{{ amb.ubiambito }}</p>
+  </ion-item>
+</ion-list>
+</ion-content>

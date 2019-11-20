@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Paginado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-button (click)="anterior()">
+        <ion-icon slot="start" name="star"></ion-icon>
+        Anterior
+      </ion-button>      
+      <ion-button (click)="siguiente()">
+        Siguiente
+        <ion-icon slot="end" name="star"></ion-icon>
+      </ion-button>
+  <ion-list>
+    <ion-list-header>
+      Ambitos
+    </ion-list-header>
+    <ion-item         
+        *ngFor="let dist of dists" >
+    <h2>{{ dist.nombre }}</h2><br>
+    <p>{{ dist.ubiambito }}</p>
+  </ion-item>
+</ion-list>
+</ion-content>

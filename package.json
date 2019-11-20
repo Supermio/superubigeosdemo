@@ -1,8 +1,8 @@
 {
   "name": "dyn",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Víctor Manuel Pease Solano",
+  "homepage": "https://victorpease.com/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

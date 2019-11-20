@@ -30,7 +30,12 @@ export class AppComponent {
       title: 'Online',
       url: '/online',
       icon: 'card'
-    }
+    },
+    {
+      title: 'Paginado',
+      url: '/paginado',
+      icon: 'card'
+    }        
   ];
   constructor(
     private platform: Platform,

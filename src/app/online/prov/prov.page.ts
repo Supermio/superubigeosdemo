@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UbigeosService } from '../service/ubigeos.service';
+import { UbigeosService } from '../../service/superubigeos/ubigeos.service';
 import { Level1DTO } from '../model/prov.DTO';
 import { ActivatedRoute } from '@angular/router';
 
