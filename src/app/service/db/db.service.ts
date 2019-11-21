@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import * as $PouchDB from 'pouchdb/dist/pouchdb';
-//import * as $CordovaSqlitePlugin from 'pouchdb-adapter-cordova-sqlite';
-const PouchDB = $PouchDB['default'];
-//const CordovaSqlitePlugin = $CordovaSqlitePlugin['default'];
+// import * as $CordovaSqlitePlugin from 'pouchdb-adapter-cordova-sqlite';
+const PouchDB = $PouchDB.default;
+// const CordovaSqlitePlugin = $CordovaSqlitePlugin['default'];
 
 /*@Injectable({
   providedIn: 'root'
@@ -34,7 +34,7 @@ export class DbService {
   constructor() {
     console.log('Estoy en el constructor de db.service');
     PouchDB.setMaxListeners(100);
-    //PouchDB.plugin(CordovaSqlitePlugin);
+    // PouchDB.plugin(CordovaSqlitePlugin);
   }
 
   initialize(pDbRemoteUrl, pDbUserName, pDbPassword, pDbRemoteName, pDbSync, pDbLocalName) {
@@ -53,10 +53,10 @@ export class DbService {
       console.log('Base local ya estuvo abierta');
     } else {
       this.db = new PouchDB(
-        this.dbRemote.local, 
-        { 
-          //adapter: 'cordova-sqlite', 
-          size: 100, 
+        this.dbRemote.local,
+        {
+          // adapter: 'cordova-sqlite',
+          size: 100,
           auto_compaction: true
         }
       );
